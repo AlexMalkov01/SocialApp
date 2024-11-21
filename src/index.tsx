@@ -2,7 +2,7 @@ import { render } from "react-dom";
 import { App } from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Suspense } from "react";
-import ThemeProvider from "./theme/ThemeProvider";
+import ThemeProvider from "./shared/config/theme/ThemeProvider";
 
 render(
     <BrowserRouter>

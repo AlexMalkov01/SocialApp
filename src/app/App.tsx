@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import Counter from "./components/counter";
 import { Link } from "react-router-dom";
 import MainPageLazy from "./pages/MainPage/MainPage.lazy";
 import AboutPageLazy from "./pages/AboutPage/AboutPage.lazy";
@@ -25,7 +24,6 @@ export function App () {
             <Route path="/" element={<MainPageLazy/>} />
             <Route path="/about" element={<AboutPageLazy/>} />
         </Routes> 
-        <Counter/>
         </div>   
         </>
     )
