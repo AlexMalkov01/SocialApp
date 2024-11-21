@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { Link } from "react-router-dom";
-import MainPageLazy from "./pages/MainPage/MainPage.lazy";
-import AboutPageLazy from "./pages/AboutPage/AboutPage.lazy";
 import "./styles/index.scss"
-import UseTheme from "./theme/useTheme";
-import { classNames } from "./helpers/classNames/classNames";
+import UseTheme from "app/providers/ThemeProvider/lib/useTheme";
+import { classNames } from "shared/lib/classNames/classNames";
+import { AboutPage } from "pages/AboutPage";
+import { MainPage } from "pages/MainPage";
+import { AppRouter } from "./providers/router";
 
 
 
@@ -14,16 +15,14 @@ export function App () {
 
     return (
         <>
+      
         <div className={classNames("app" , {}, [theme])}>
         <button  onClick={toggleTheme}>
             Поменять тему
         </button>
         <Link to={"/"}>МЕНЮ</Link>
         <Link to={"/about"}>АБОУТ</Link>
-        <Routes>
-            <Route path="/" element={<MainPageLazy/>} />
-            <Route path="/about" element={<AboutPageLazy/>} />
-        </Routes> 
+        <AppRouter/>
         </div>   
         </>
     )
