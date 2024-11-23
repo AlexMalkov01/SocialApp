@@ -6,6 +6,7 @@ const MainPage = () => {
     return (
         <div>
             <h1>{t("main-page")}</h1>
+            <p>{t("main-page2")}</p>
         </div>
     )
 }

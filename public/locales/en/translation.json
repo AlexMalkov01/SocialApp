@@ -1,5 +1,8 @@
 {
-    "welcome": "Welcome",
-    "description": "This is a description",
-    "translate": "EN"
-  }
+  "welcome": "Welcome",
+  "description": "This is a description",
+  "translate": "EN",
+  "link_about": "About",
+  "link_main": "Home"
+
+}

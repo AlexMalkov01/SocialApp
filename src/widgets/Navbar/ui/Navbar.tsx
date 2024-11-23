@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom"
+import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames/classNames"
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 import style from "widgets/Navbar/ui/Navmar.module.scss"
 
 
@@ -12,6 +11,7 @@ interface NavbarProps {
 
 export const Navbar = ({className}:NavbarProps) => {
 
+    const { t } = useTranslation()
     
     return (
         <div className={classNames(style.navbar , {} , [className])}>
@@ -23,13 +23,13 @@ export const Navbar = ({className}:NavbarProps) => {
                 <AppLink 
                 theme={AppLinkTheme.SECONDARY} 
                 to={"/"}>
-                    МЕНЮ
+                    {t("link_main")  }
                 </AppLink>
 
                 <AppLink 
                 theme={AppLinkTheme.SECONDARY} 
                 to={"/about"}>
-                    АБОУТ
+                    {t("link_about")}
                 </AppLink>
             </div>
         </div>

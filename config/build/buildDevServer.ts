@@ -7,5 +7,6 @@ export function buildDevServer(options:IBuildOptions): DevServerConfig {
         port: options.port,
         open: true,
         historyApiFallback: true,
+        hot: true,
     }
 }
