@@ -1,6 +1,11 @@
 .app.dark {
-    --bg-color: #4e749e;
+    --bg-color: #2b2d42; /* Темно-синий/серый фон */
+    --inverted-bg-color: #8d99ae; /* Светло-серый для элементов */
 
-    --primary-color: rgb(85, 182, 98);
-    --secondary-color:  rgb(79, 241, 101);
+    --primary-color: #ffba08; /* Красный акцент */
+    --secondary-color:  #f4a261; /* Темно-красный для вторичных акцентов */
+
+    --inverted-primary-color:  #3a86ff;; /* Нежно-голубой */
+    --inverted-secondary-color:#78c6fa; /* Сине-зеленый */
 }
+

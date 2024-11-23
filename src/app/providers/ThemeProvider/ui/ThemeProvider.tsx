@@ -9,8 +9,6 @@ const ThemeProvider:FC = ({children}) => {
 
     const [theme, setTheme] = useState<Theme>(appTheme);
 
-    
-
     const defuoltProps = useMemo(()=> ({
         theme,
         setTheme,

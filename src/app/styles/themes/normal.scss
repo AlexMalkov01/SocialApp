@@ -1,6 +1,12 @@
 .app.normal {
-    --bg-color: #ccd2da;
+    --bg-color: #d9e4e4; /* Спокойный серо-голубой фон */
+    --inverted-bg-color: #d0d4e4; /* Более темный серый для сайдбара и навбара */
 
-    --primary-color: rgb(12, 71, 160);
-    --secondary-color:  rgb(43, 82, 255);
+    --primary-color: #3a86ff; /* Мягкий голубой акцент */
+    --secondary-color: #78c6fa; /* Спокойный бирюзовый для вторичных акцентов */
+
+    --inverted-primary-color: #ffba08; /* Мягкий золотисто-желтый */
+    --inverted-secondary-color: #f4a261; /* Нежный персиковый */
 }
+
+
