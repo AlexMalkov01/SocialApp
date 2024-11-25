@@ -1,15 +1,14 @@
-@import "reset.scss";
-@import "themes/dark.scss";
-@import "themes/normal.scss";
-@import "variables/global.scss";
+/* stylelint-disable indentation */
 
+@use "reset";
+@use "themes/dark";
+@use "themes/normal";
+@use "variables/global";
 
 .app {
     font: var(--font-m);
-
     background: var(--bg-color);
     color:var(--primary-color);
-
     min-height: 100vh;
 }
 

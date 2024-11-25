@@ -1,9 +1,8 @@
 {
-  "welcome": "Добро пожаловать",
   "description": "Это описание",
-  "translate": "RU",
   "link_about": "О нас",
   "link_main": "Главная",
-  "main-page2": "Это главная страница"
-
+  "main-page2": "Это главная страница",
+  "translate": "RU",
+  "welcome": "Добро пожаловать"
 }

@@ -1,6 +1,9 @@
 {
-    "presets": ["@babel/preset-env"],
-    "plugins": [
-      "i18next-extract"
-    ]
-  }
+  "presets": [
+    "@babel/preset-env",          // Для поддержки последних функций JavaScript
+    "@babel/preset-typescript"    // Для поддержки TypeScript
+  ],
+  "plugins": [
+    "i18next-extract"             // Плагин для извлечения строк i18n
+  ]
+}

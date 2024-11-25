@@ -27,14 +27,18 @@ export function buildLoaders({isDev}:IBuildOptions): webpack.RuleSetRule[] {
           options: {
             presets: ['@babel/preset-env'],
             plugins: [
-              "i18next-extract",
-              {
-                locales: ["ru", "en"],
-              }
+              [
+                "i18next-extract",
+                {
+                  locales: ["ru", "en"],
+                  outputPath: "public/locales/{{locale}}/{{ns}}.json"
+                }
+              ]
             ]
           }
         }
       }
+      
     
     const cssLoader =  {
         test: /\.s[ac]ss$/i,
