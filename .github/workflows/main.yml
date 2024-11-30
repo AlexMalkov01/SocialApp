@@ -21,10 +21,14 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install modules
       run: npm install
+      if: always()
     - name: Build production project
       run: npm run build:prod
+      if: always()
     - name: Linter TS
       run: npm run lint:ts
+      if: always()
     - name: Unit tests
       run: npm run unit
+      if: always()
 
