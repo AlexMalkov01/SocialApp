@@ -1,48 +1,56 @@
 // eslint.config.mjs
 import * as globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import pluginReact, { rules } from 'eslint-plugin-react';
-import i18nextPlugin from 'eslint-plugin-i18next'; // Импортируем плагин
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import pluginReact from 'eslint-plugin-react';
+import i18nextPlugin from 'eslint-plugin-i18next';
 
-/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-  },
-  {
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'], // Какие файлы линтить
     languageOptions: {
+      parser: tsParser, // Используем TypeScript-парсер
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true, // Поддержка JSX
+        },
+      },
       globals: {
-        ...globals.browser, // Используем глобальные переменные для браузера
+        ...globals.browser, // Глобальные переменные браузера
       },
     },
-  },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  {
     plugins: {
-      i18next: i18nextPlugin, // Используем объект с плагином
+      react: pluginReact,
+      '@typescript-eslint': tseslint,
+      i18next: i18nextPlugin,
     },
     rules: {
-      'quotes': ['error', 'double'], // Можно изменить на 'double' для двойных кавычек
-      'semi': ['error', 'always'],
-      '@typescript-eslint/no-unused-vars': ['warn'],
-      'react/react-in-jsx-scope': 'off',
-      'no-console': 'warn',
-
-      // Пример правил для i18n
-      "i18next/no-literal-string": ["error", { markupOnly: true , ignoreAttribute:["data-testid", "to"]}],  // Не разрешает строковые литералы в JSX
+      'quotes': ['error', 'double'], // Используем двойные кавычки
+      'semi': ['error', 'always'], // Требуем точки с запятой
+      '@typescript-eslint/no-unused-vars': ['warn'], // Неиспользуемые переменные
+      'react/react-in-jsx-scope': 'off', // React в области видимости (не нужно с React 17+)
+      'no-console': 'warn', // Предупреждение о console.log
+      'i18next/no-literal-string': [
+        'error',
+        { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }, // Локализация строк
+      ],
+      'react/boolean-prop-naming': [
+        'error',
+        {
+          rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+', // Префиксы для булевых пропсов
+          message: 'Boolean props должны начинаться с "is" или "has".',
+        },
+      ],
     },
-    overrides: [
-      {
-        files: ["**/srs/**/*.test.{ts,tsx}"],
-        rules: {
-          "i18next/no-literal-string" : "off" // Отключаем правило для тестовых файлов
-        }
-      }
-    ]
+  },
+  {
+    files: ['**/src/**/*.test.{ts,tsx}'], // Файлы тестов
+    rules: {
+      'i18next/no-literal-string': 'off', // Отключаем правило для тестов
+    },
   },
 ];
+
 
 
