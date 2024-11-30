@@ -2,6 +2,7 @@
   "NotFoundPage": "Page not found",
   "Page Error": "Page Error",
   "description": "This is a description",
+  "link_a": "",
   "link_about": "About",
   "link_main": "Home",
   "rerender": "Rerender Page",
