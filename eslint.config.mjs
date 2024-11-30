@@ -2,7 +2,7 @@
 import * as globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import pluginReact from 'eslint-plugin-react';
+import pluginReact, { rules } from 'eslint-plugin-react';
 import i18nextPlugin from 'eslint-plugin-i18next'; // Импортируем плагин
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -32,8 +32,16 @@ export default [
       'no-console': 'warn',
 
       // Пример правил для i18n
-      'i18next/no-literal-string': ['error', { 'markupOnly': true }],  // Не разрешает строковые литералы в JSX
+      "i18next/no-literal-string": ["error", { markupOnly: true , ignoreAttribute:["data-testid", "to"]}],  // Не разрешает строковые литералы в JSX
     },
+    overrides: [
+      {
+        files: ["**/srs/**/*.test.{ts,tsx}"],
+        rules: {
+          "i18next/no-literal-string" : "off" // Отключаем правило для тестовых файлов
+        }
+      }
+    ]
   },
 ];
 

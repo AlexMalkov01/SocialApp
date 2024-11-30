@@ -1,7 +1,11 @@
 {
   "presets": [
     "@babel/preset-env",          // Для поддержки последних функций JavaScript
-    "@babel/preset-typescript"    // Для поддержки TypeScript
+    "@babel/preset-typescript",
+    ["@babel/preset-react" , {
+      "runtime": "automatic"  // Для поддержки JSX в React
+    }]
+       // Для поддержки TypeScript
   ],
   "plugins": [
     "i18next-extract"             // Плагин для извлечения строк i18n

@@ -1,5 +1,6 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import HtmlWebpackPlugin from "html-webpack-plugin"
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import path from "path";
 import * as webpack from 'webpack';
 import { IBuildOptions } from "./types/config";
@@ -18,6 +19,10 @@ export function buildPlugins({paths , isDev}:IBuildOptions):webpack.WebpackPlugi
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev)
         }),
-        new webpack.HotModuleReplacementPlugin(),
+        new BundleAnalyzerPlugin({
+            openAnalyzer:false
+        }),
+
+        new webpack.HotModuleReplacementPlugin()
     ]
-}
+};

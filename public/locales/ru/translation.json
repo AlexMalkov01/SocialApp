@@ -1,8 +1,12 @@
 {
+  "NotFoundPage": "Страница не найдена",
+  "Page Error": "Ошибка страницы",
   "description": "Это описание",
   "link_about": "О нас",
   "link_main": "Главная",
   "main-page2": "Это главная страница",
+  "rerender": "Обновить страницу",
+  "toggle": "Кнупка",
   "translate": "RU",
   "welcome": "Добро пожаловать"
 }

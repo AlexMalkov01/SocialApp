@@ -40,6 +40,11 @@
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
-    },
-  }
+    }
+  },
+  "include": [
+    "./config/jest/setupTest.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ],
 }

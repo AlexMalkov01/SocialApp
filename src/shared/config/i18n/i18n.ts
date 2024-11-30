@@ -8,11 +8,11 @@ i18n
   .use(LanguageDetector) // Для автоматического определения языка
   .use(initReactI18next) // Интеграция с React
   .init({
-    fallbackLng: 'en', // Резервный язык
-    lng: 'en', // Язык по умолчанию
+    fallbackLng: "en", // Резервный язык
+    lng: "ru", // Язык по умолчанию
     debug: __IS_DEV__, // Включить логи для разработки
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json', // Путь к JSON-файлам с переводами
+      loadPath: "/locales/{{lng}}/{{ns}}.json", // Путь к JSON-файлам с переводами
     },
     interpolation: {
       escapeValue: false, // Для работы с React JSX (не экранирует строки)
