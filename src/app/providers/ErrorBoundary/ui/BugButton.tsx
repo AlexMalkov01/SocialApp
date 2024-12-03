@@ -1,5 +1,6 @@
+/* eslint-disable i18next/no-literal-string */
 import { useEffect, useState } from "react";
-import { Button } from "shared/ui/Button";
+import { Button, ButtonSize, ButtonTheme } from "shared/ui/Button";
 
 export const BugButton = () => {
 
@@ -20,7 +21,7 @@ export const BugButton = () => {
     },[error]);
  
     return (
-        <Button onClick={toggleError}>
+        <Button size={ButtonSize.XLARGE} theme={ButtonTheme.OUTLINE} onClick={toggleError}>
             Error
         </Button>
     );

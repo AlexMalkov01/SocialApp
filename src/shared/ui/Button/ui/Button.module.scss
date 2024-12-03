@@ -1,10 +1,12 @@
 .Button {
     cursor: pointer;
     color: var(--primary-color);
+    background: var(--bg-color);
     padding: 6px 15px;
 }
 
-.clear {
+.clear,
+.clearInverted {
     padding: 0;
     border: none;
     background: none;
@@ -15,6 +17,10 @@
     padding: 10px;
     border: var(--primary-color);
     color: var(--primary-color);
+}
+
+.clearInverted {
+    color: var(--inverted-secondary-color);
 }
 
 .background {
@@ -38,30 +44,30 @@
 .scuered.small {
     width: var(--font-line-m);
     height: var(--font-line-m);
-    font-size: var(--font-m);
+    font-size: var(--font-size-m);
 }
 
 .scuered.medium {
     width: var(--font-line-l);
     height: var(--font-line-l);
-    font-size: var(--font-l);
+    font-size: var(--font-size-l);
 }
 
 .scuered.xlarge {
     width: var(--font-line-xl);
     height: var(--font-line-xl);
-    font-size: var(--font-xl);
+    font-size: var(--font-size-xl);
 }
 
 .small {
-    font-size: var(--font-m);
+    font-size: var(--font-size-m);
 };
 
 .medium {
-    font-size: var(--font-l);
+    font-size: var(--font-size-l);
 }
 
 .xlarge {
-    font-size: var(--font-xl);
+    font-size: var(--font-size-xl);
 }
 

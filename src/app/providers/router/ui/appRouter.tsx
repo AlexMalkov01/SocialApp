@@ -6,7 +6,7 @@ export const AppRouter = () => {
 
     return (
         <Routes>
-            {Object.values(routeConfig).map(({path,element})=> (
+            {Object.values(routeConfig).map(({ path, element })=> (
             <Route 
             key={path} 
             path={path}  
@@ -18,5 +18,5 @@ export const AppRouter = () => {
             />)
             )}
         </Routes> 
-    )
-}
+    );
+};
