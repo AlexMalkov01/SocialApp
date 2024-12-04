@@ -8,9 +8,11 @@ import { PageLoader } from "shared/ui/PageLoader/ui/PageLoader";
 import { ErrorBoundary } from "app/providers/ErrorBoundary";
 import "./app/styles/index.scss";
 import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
+import { StoreProvider } from "app/providers/StoreProvider";
 
 
 render(
+    <StoreProvider>
     <BrowserRouter>
         <Suspense fallback={<PageLoader/>}>
             <ErrorBoundary>
@@ -19,6 +21,7 @@ render(
                 </ThemeProvider>
             </ErrorBoundary>
         </Suspense>
-    </BrowserRouter>,
+    </BrowserRouter>
+    </StoreProvider>,
     document.getElementById("root")
 );

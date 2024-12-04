@@ -35,7 +35,7 @@ export const Sidebar = ({className}:SidebarProps) => {
             size={ButtonSize.XLARGE}
             isSquare
             >{collapsed ? ">" : "<"}</Button>
-            <BugButton/> 
+            <BugButton /> 
 
             <div className={classNames(style.items)}>
                 

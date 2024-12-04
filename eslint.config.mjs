@@ -35,6 +35,7 @@ export default [
         'error',
         { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }, // Локализация строк
       ],
+      "no-param-reassign": "off",
       'react/boolean-prop-naming': [
         'error',
         {

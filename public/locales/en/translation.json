@@ -1,7 +1,10 @@
 {
   "NotFoundPage": "Page not found",
   "Page Error": "Page Error",
+  "counter": "Counter",
+  "decrement": "Decrement",
   "description": "This is a description",
+  "increment": "Increment",
   "link_a": "",
   "link_about": "About",
   "link_main": "Home",

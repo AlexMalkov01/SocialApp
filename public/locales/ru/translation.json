@@ -1,7 +1,10 @@
 {
   "NotFoundPage": "Страница не найдена",
   "Page Error": "Ошибка страницы",
+  "counter": "Счетчик",
+  "decrement": "Удалить",
   "description": "Это описание",
+  "increment": "Добавить",
   "link_a": "",
   "link_about": "О нас",
   "link_main": "Главная",

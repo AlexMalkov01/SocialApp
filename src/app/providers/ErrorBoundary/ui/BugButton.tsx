@@ -21,7 +21,7 @@ export const BugButton = () => {
     },[error]);
  
     return (
-        <Button size={ButtonSize.XLARGE} theme={ButtonTheme.OUTLINE} onClick={toggleError}>
+        <Button size={ButtonSize.SMALL} theme={ButtonTheme.OUTLINE} onClick={toggleError}>
             Error
         </Button>
     );
